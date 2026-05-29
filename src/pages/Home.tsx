@@ -7,10 +7,10 @@ import { HERO_CONTENT, SKILLS, PROJECTS } from '../data/portfolio';
 
 export const Home = () => {
   const stats = [
-    { label: 'Years Experience', value: '1+' },
-    { label: 'Cloud Platforms', value: '3' },
-    { label: 'Projects Completed', value: '10+' },
-    { label: 'Technologies', value: '19+' },
+    { label: 'Years Experience', value: '5+' },
+    { label: 'Companies', value: '4+' },
+    { label: 'Projects Shipped', value: '10+' },
+    { label: 'Technologies', value: '18+' },
   ];
 
   const featuredSkills = SKILLS.slice(0, 6);
@@ -37,7 +37,7 @@ export const Home = () => {
 
             {/* Typewriter heading */}
             <div className="font-mono text-4xl md:text-6xl lg:text-8xl font-bold tracking-tight text-primary-500">
-              <Typewriter text="DevOps & Cloud Engineer" delay={80} />
+              <Typewriter text="Full-Stack & DevOps Engineer" delay={80} />
               <span className="terminal-cursor ml-2" />
             </div>
 
@@ -124,7 +124,7 @@ export const Home = () => {
               Featured Technologies
             </h2>
             <p className="text-neutral-400 max-w-2xl mx-auto">
-              A curated selection of the technologies I work with daily to build and deploy scalable systems
+              A curated selection of the technologies I work with to build and ship scalable production systems
             </p>
           </motion.div>
 
@@ -186,11 +186,11 @@ export const Home = () => {
             className="bg-bg-elevated border border-primary-500/20 p-12 rounded-2xl shadow-glow"
           >
             <h2 className="font-mono text-3xl md:text-4xl font-bold text-primary-500 mb-6">
-              Ready to Deploy Your Vision?
+              Let's Build Something Together
             </h2>
             <p className="text-xl text-neutral-200 mb-8 leading-relaxed">
-              Let's build something amazing together. From infrastructure automation to full-stack development, 
-              I'm here to turn your ideas into production reality.
+              Whether it's a full-stack product, a microservices architecture, or improving system reliability—
+              I'm here to turn ideas into production-grade reality.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -200,7 +200,7 @@ export const Home = () => {
                 Start a Project
               </Link>
               <a
-                href="https://github.com/neerajnakka"
+                href="https://github.com/Ninna-log"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-4 border-2 border-neutral-600 text-neutral-200 hover:border-primary-500 hover:text-primary-500 font-semibold rounded-lg transition-all duration-200"

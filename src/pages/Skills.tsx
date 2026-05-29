@@ -13,45 +13,45 @@ export const Skills = () => {
   const categories = [
     {
       id: 'cloud',
-      title: 'Cloud Platforms',
+      title: 'Cloud (AWS)',
       icon: Cloud,
       skills: SKILLS_BY_CATEGORY.cloud,
       color: 'text-blue-500',
     },
     {
-      id: 'containers',
-      title: 'Container & Orchestration',
-      icon: Container,
-      skills: SKILLS_BY_CATEGORY.containers,
-      color: 'text-blue-400',
-    },
-    {
-      id: 'infrastructure',
-      title: 'Infrastructure as Code',
+      id: 'observability',
+      title: 'Observability & Monitoring',
       icon: TerminalIcon,
-      skills: SKILLS_BY_CATEGORY.infrastructure,
+      skills: SKILLS_BY_CATEGORY.observability,
       color: 'text-purple-500',
     },
     {
       id: 'devops',
-      title: 'DevOps & Automation',
-      icon: Code,
+      title: 'DevOps & Architecture',
+      icon: Container,
       skills: SKILLS_BY_CATEGORY.devops,
       color: 'text-green-500',
     },
     {
-      id: 'development',
-      title: 'Development Stack',
+      id: 'backend',
+      title: 'Backend Development',
+      icon: Database,
+      skills: SKILLS_BY_CATEGORY.backend,
+      color: 'text-red-500',
+    },
+    {
+      id: 'frontend',
+      title: 'Frontend Development',
       icon: Code,
-      skills: SKILLS_BY_CATEGORY.development,
+      skills: SKILLS_BY_CATEGORY.frontend,
       color: 'text-orange-500',
     },
     {
-      id: 'database',
-      title: 'Databases',
-      icon: Database,
-      skills: SKILLS_BY_CATEGORY.database,
-      color: 'text-red-500',
+      id: 'languages',
+      title: 'Languages',
+      icon: Code,
+      skills: SKILLS_BY_CATEGORY.languages,
+      color: 'text-yellow-500',
     },
   ];
 
@@ -117,11 +117,11 @@ export const Skills = () => {
         case 'cat':
           const skillName = args.slice(1).join(' ');
           const skill = SKILLS_BY_CATEGORY.cloud.find(s => s.name.toLowerCase() === skillName) ||
-                       SKILLS_BY_CATEGORY.containers.find(s => s.name.toLowerCase() === skillName) ||
-                       SKILLS_BY_CATEGORY.infrastructure.find(s => s.name.toLowerCase() === skillName) ||
+                       SKILLS_BY_CATEGORY.observability.find(s => s.name.toLowerCase() === skillName) ||
                        SKILLS_BY_CATEGORY.devops.find(s => s.name.toLowerCase() === skillName) ||
-                       SKILLS_BY_CATEGORY.development.find(s => s.name.toLowerCase() === skillName) ||
-                       SKILLS_BY_CATEGORY.database.find(s => s.name.toLowerCase() === skillName);
+                       SKILLS_BY_CATEGORY.backend.find(s => s.name.toLowerCase() === skillName) ||
+                       SKILLS_BY_CATEGORY.frontend.find(s => s.name.toLowerCase() === skillName) ||
+                       SKILLS_BY_CATEGORY.languages.find(s => s.name.toLowerCase() === skillName);
 
           if (skill) {
             output = [
@@ -351,9 +351,9 @@ export const Skills = () => {
             <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
                 { cmd: 'help', desc: 'Show commands' },
-                { cmd: 'ls cloud', desc: 'Cloud skills' },
+                { cmd: 'ls frontend', desc: 'Frontend skills' },
                 { cmd: 'levels', desc: 'Proficiency guide' },
-                { cmd: 'cat Docker', desc: 'Skill details' },
+                { cmd: 'cat React', desc: 'Skill details' },
               ].map((item) => (
                 <button
                   key={item.cmd}

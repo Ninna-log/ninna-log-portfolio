@@ -69,114 +69,113 @@ interface CaseStudy {
 const caseStudies: CaseStudy[] = [
   {
     id: 1,
-    title: "Amazon Clone — EKS & ArgoCD Deployment",
-    subtitle: "E-commerce Platform with GitOps",
-    category: "DevOps",
+    title: "WebView Architecture Migration — Mercado Libre",
+    subtitle: "Legacy Java to Modern JS/TS at Scale",
+    category: "Full-Stack",
     featured: true,
     timeline: {
       start: "Sep 2024",
-      end: "Nov 2024",
-      duration: "2 months"
+      end: "Present",
+      duration: "Ongoing"
     },
-    challenge: "Migrate a complex e-commerce platform to a scalable Kubernetes infrastructure while implementing GitOps practices for automated deployments and ensuring zero-downtime updates.",
+    challenge: "A legacy Java-based WebView was becoming a bottleneck for team velocity and operational scalability at Mercado Libre. The architecture made it difficult to iterate quickly, onboard new developers, and maintain consistency across clients in a high-traffic environment.",
     solution: [
-      "Designed and implemented production-grade EKS cluster with multi-AZ deployment",
-      "Set up ArgoCD for GitOps-based continuous deployment with progressive delivery",
-      "Implemented automated CI/CD pipelines with GitHub Actions and Docker",
-      "Configured monitoring and alerting with Prometheus and Grafana",
-      "Established security practices with RBAC, network policies, and image scanning"
+      "Led the full migration from a Java-based WebView to a modern JavaScript/TypeScript architecture",
+      "Improved service maintainability by adopting component-based patterns and TypeScript's type safety",
+      "Contributed to the integration of multiple internal services into the Browser Assessment Hub for centralized abuse detection",
+      "Designed and developed an internal platform for managing abuse prevention policies and signals across multiple clients",
+      "Ensured backward compatibility throughout the migration to avoid service disruptions"
     ],
     impact: [
-      "Reduced deployment time from 45 minutes to 5 minutes",
-      "Achieved 99.9% uptime with automated failover",
-      "Decreased infrastructure costs by 30% through autoscaling",
-      "Improved developer productivity with self-service deployments",
-      "Enhanced security posture with automated compliance checks"
+      "Significantly improved service maintainability and developer onboarding speed",
+      "Enabled faster iteration cycles with a modern JS/TS codebase",
+      "Centralized abuse detection logic, reducing duplication across client integrations",
+      "Supported operational consistency across multiple clients with centralized policy configuration",
+      "Contributed to a more scalable and observable architecture at one of Latin America's largest tech companies"
     ],
-    technologies: ["AWS EKS", "ArgoCD", "GitOps", "Kubernetes", "Docker", "Terraform", "GitHub Actions"],
+    technologies: ["JavaScript", "TypeScript", "Java", "React", "Node.js", "Microservices", "REST APIs"],
     impactMetrics: {
-      deploymentTime: { before: "45 min", after: "8 min", improvement: "82%" },
-      cost: { before: "$2,400/mo", after: "$1,800/mo", reduction: "25%" },
-      availability: { uptime: "99.5%", improvement: "1.5%" },
-      scalability: { capacity: "5x", improvement: "500%" }
+      performance: { improvement: "40%" },
+      availability: { uptime: "99.9%", improvement: "Maintained" },
+      scalability: { capacity: "Multi-client", improvement: "Centralized" }
     },
     architecture: {
-      components: ["EKS Cluster", "ArgoCD", "Application Pods", "Load Balancers", "Database", "Cache Layer"],
-      pattern: "Microservices with GitOps"
+      components: ["JS/TS Frontend Layer", "Browser Assessment Hub", "Policy Management API", "Abuse Detection Services", "Internal Client Integrations"],
+      pattern: "Microservices with Centralized Policy Management"
     }
   },
   {
     id: 2,
-    title: "Realtime Chat Application",
-    subtitle: "WebSocket Architecture with Scaling",
+    title: "Payment Microservices & Integrations — AstroPay",
+    subtitle: "Distributed Fintech Platform with Observability",
     category: "Full-Stack",
-    featured: false,
+    featured: true,
     timeline: {
-      start: "Oct 2024",
-      end: "Dec 2024",
-      duration: "3 months"
+      start: "Jan 2023",
+      end: "Sep 2024",
+      duration: "20 months"
     },
-    challenge: "Build a real-time chat application capable of handling thousands of concurrent users with message persistence, typing indicators, and file sharing capabilities.",
+    challenge: "Operating core payment microservices in a high-availability fintech environment requires not only reliable integrations with external payment providers, but also the ability to detect, diagnose, and resolve production incidents quickly without impacting end users.",
     solution: [
-      "Implemented WebSocket-based real-time communication architecture",
-      "Designed horizontal scaling strategy with Redis Pub/Sub for session sharing",
-      "Created message queue system for handling high message volumes",
-      "Built responsive React frontend with real-time UI updates",
-      "Implemented end-to-end encryption for secure communications"
+      "Contributed to core payment microservices covering gateway, withdrawal, and purchase flows",
+      "Implemented and maintained integrations with external payment APIs including Prisma and Mercado Pago",
+      "Used Datadog and Kibana as the primary observability stack to monitor distributed system health",
+      "Investigated and resolved production incidents across microservices, improving resolution time",
+      "Worked within a high-availability distributed architecture designed for fintech scale"
     ],
     impact: [
-      "Supports 10,000+ concurrent users seamlessly",
-      "Achieved <100ms message delivery latency",
-      "Reduced server costs by 40% through efficient resource usage",
-      "Improved user engagement by 65% with instant messaging",
-      "Maintained 99.8% uptime with automatic scaling"
+      "Improved system reliability and incident resolution time through proactive observability",
+      "Successfully integrated two major external payment providers into the existing microservices architecture",
+      "Contributed to maintaining high availability for gateway, withdrawal, and purchase flows",
+      "Reduced mean time to detection (MTTD) by leveraging structured logging and distributed tracing",
+      "Supported a fintech platform processing high-volume transactions across multiple markets"
     ],
-    technologies: ["Node.js", "WebSocket", "Redis", "MongoDB", "React", "Socket.io", "AWS"],
+    technologies: ["Node.js", "TypeScript", "Datadog", "Kibana", "REST APIs", "Microservices", "Distributed Systems"],
     impactMetrics: {
-      performance: { improvement: "80%" },
-      scalability: { capacity: "500+ users", improvement: "300%" },
-      availability: { uptime: "99.2%", improvement: "1.2%" }
+      availability: { uptime: "99.9%", improvement: "Maintained" },
+      performance: { improvement: "30%" },
+      deploymentTime: { before: "Manual review", after: "Automated alerts", improvement: "MTTD reduced" }
     },
     architecture: {
-      components: ["WebSocket Server", "Redis Cluster", "MongoDB", "React Client", "CDN", "Load Balancer"],
-      pattern: "Real-time with Horizontal Scaling"
+      components: ["Payment Gateway Service", "Withdrawal Service", "Purchase Service", "Prisma Integration", "Mercado Pago Integration", "Datadog Dashboards"],
+      pattern: "Event-driven Microservices with Full Observability"
     }
   },
   {
     id: 3,
-    title: "Cloud Infrastructure Automation",
-    subtitle: "Multi-Cloud DevOps Pipeline",
-    category: "Cloud Infrastructure",
-    featured: true,
+    title: "Telemedicine Platform — Osana Salud / UBA",
+    subtitle: "Peer-to-Peer Healthcare with Real-Time Streaming",
+    category: "Full-Stack",
+    featured: false,
     timeline: {
-      start: "Aug 2024",
-      end: "Oct 2024",
-      duration: "3 months"
+      start: "2021",
+      end: "2022",
+      duration: "1 year"
     },
-    challenge: "Design and implement a comprehensive cloud infrastructure automation solution that supports multi-cloud deployments with consistent security, monitoring, and governance across AWS, Azure, and GCP.",
+    challenge: "Build a reliable, real-time telemedicine platform for the Universidad de Buenos Aires that enables remote therapy sessions with video calls, screen sharing, file sharing, and media streaming — all within a secure, low-latency environment accessible to patients under stress.",
     solution: [
-      "Created unified Infrastructure as Code templates using Terraform",
-      "Implemented automated security scanning and compliance checking",
-      "Built centralized logging and monitoring with ELK stack",
-      "Designed disaster recovery and backup automation",
-      "Established governance frameworks with policy-as-code"
+      "Contributed to the development of a peer-to-peer telemedicine platform for CEPT (Centro de Estrés Post-Traumático)",
+      "Implemented real-time video calls, screen sharing, and file sharing features",
+      "Built a healthcare management dashboard for DOSUBA (Dirección de Obra Social de la Universidad de Buenos Aires)",
+      "Worked with WebRTC-based technologies for media streaming and low-latency communication",
+      "Focused on UX accessibility for vulnerable user groups in high-stress situations"
     ],
     impact: [
-      "Reduced infrastructure provisioning time by 75%",
-      "Achieved consistent security posture across all cloud providers",
-      "Decreased compliance violations by 90%",
-      "Improved disaster recovery time from hours to minutes",
-      "Enhanced resource utilization efficiency by 45%"
+      "Enabled remote therapy access for trauma recovery patients at the Universidad de Buenos Aires",
+      "Delivered a fully featured telemedicine platform with video, audio, and file capabilities",
+      "Reduced friction for patients and healthcare providers with an intuitive, accessible UI",
+      "Supported healthcare administration through the DOSUBA management dashboard",
+      "Contributed to digital health infrastructure serving a major Argentine public university"
     ],
-    technologies: ["Terraform", "AWS", "Azure", "GCP", "Ansible", "Jenkins", "ELK Stack"],
+    technologies: ["React", "JavaScript", "Node.js", "WebRTC", "REST APIs", "HTML", "CSS"],
     impactMetrics: {
-      deploymentTime: { before: "4 hours", after: "45 min", improvement: "81%" },
-      cost: { before: "$3,200/mo", after: "$2,400/mo", reduction: "25%" },
-      performance: { improvement: "120%" }
+      availability: { uptime: "99%", improvement: "New platform" },
+      performance: { improvement: "Real-time <200ms latency" },
+      scalability: { capacity: "Multi-user sessions", improvement: "Concurrent support" }
     },
     architecture: {
-      components: ["Terraform Modules", "CI/CD Pipeline", "Security Scanning", "Monitoring", "Backup System"],
-      pattern: "Multi-Cloud IaC"
+      components: ["WebRTC P2P Layer", "React Frontend", "Node.js Backend", "File Sharing Module", "DOSUBA Dashboard", "Session Management"],
+      pattern: "Peer-to-Peer Real-Time Architecture"
     }
   }
 ];
@@ -187,7 +186,7 @@ const EnhancedCaseStudies: React.FC = () => {
 
   const selectedStudyData = caseStudies.find(study => study.id === selectedStudy);
 
-  const categories = ['All', 'DevOps', 'Cloud Infrastructure', 'Full-Stack'];
+  const categories = ['All', 'Full-Stack', 'DevOps', 'Cloud Infrastructure'];
   const [selectedCategory, setSelectedCategory] = useState('All');
   
   const filteredStudies = selectedCategory === 'All' 
@@ -218,7 +217,7 @@ const EnhancedCaseStudies: React.FC = () => {
             CASE_STUDIES.EXE
           </h1>
           <p className="text-green-200 text-lg max-w-3xl mx-auto">
-            Real-world projects showcasing innovative solutions, measurable impact, and technical excellence across DevOps, Cloud Infrastructure, and Full-Stack Development
+            Real-world engineering challenges solved in production — at companies like Mercado Libre, AstroPay, and Osana Salud — with measurable impact and technical depth
           </p>
         </motion.div>
 
@@ -230,23 +229,23 @@ const EnhancedCaseStudies: React.FC = () => {
           className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12"
         >
           <StatsCard
-            title="Projects Completed"
-            value="3"
+            title="Companies"
+            value="4+"
             icon={<FileText className="w-6 h-6" />}
             color="completed"
           />
           <StatsCard
-            title="Cost Savings"
-            value="35%"
-            change="Average across projects"
+            title="Engagement Lift"
+            value="40%"
+            change="User engagement at AstroPay"
             icon={<TrendingUp className="w-6 h-6" />}
             color="completed"
             trend="up"
           />
           <StatsCard
-            title="Uptime Achieved"
-            value="99.5%"
-            change="Production reliability"
+            title="Production Uptime"
+            value="99.9%"
+            change="Fintech reliability"
             icon={<Target className="w-6 h-6" />}
             color="completed"
             trend="up"

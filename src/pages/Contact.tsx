@@ -111,13 +111,6 @@ export const Contact = () => {
       color: 'text-blue-500',
     },
     {
-      icon: Phone,
-      label: 'Phone',
-      value: CONTACT.phoneNo,
-      href: `tel:${CONTACT.phoneNo}`,
-      color: 'text-green-500',
-    },
-    {
       icon: MapPin,
       label: 'Location',
       value: CONTACT.address,
@@ -138,12 +131,6 @@ export const Contact = () => {
       url: CONTACT.social.linkedin,
       icon: Linkedin,
       color: 'hover:text-blue-500',
-    },
-    {
-      name: 'Twitter',
-      url: CONTACT.social.twitter,
-      icon: Twitter,
-      color: 'hover:text-blue-400',
     },
   ];
 
@@ -341,7 +328,7 @@ export const Contact = () => {
                   </div>
                   <div className="text-sm text-neutral-400">
                     <div className="mb-2">Response time: Within 24 hours</div>
-                    <div>Time zone: IST (UTC+5:30)</div>
+                    <div>Time zone: ART (UTC-3) — Buenos Aires</div>
                   </div>
                 </div>
               </div>

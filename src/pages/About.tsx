@@ -6,17 +6,51 @@ import { Calendar, MapPin, Code, Zap } from 'lucide-react';
 export const About = () => {
   const timeline = [
     {
-      year: '2023 - Present',
-      title: 'Freelance DevOps & Cloud Engineer',
-      company: 'Self-Employed',
+      year: 'Sep 2024 – Present',
+      title: 'Software Engineer',
+      company: 'Mercado Libre',
       description:
-        'Working on freelance projects focusing on cloud automation, CI/CD, and container orchestration using AWS, Docker, and Kubernetes.',
-      icon: Code,},
+        'Led the migration of a legacy Java-based WebView to a modern JS/TS architecture. Designed an internal platform for abuse prevention policies and contributed to the Browser Assessment Hub for centralized abuse detection.',
+      icon: Code,
+    },
     {
-      year: '2019 - 2023',
-      title: 'Computer Science Graduate',
-      company: 'CVR College Of Engineering',
-      description: 'Bachelor\'s degree with focus on software engineering and cloud computing.',
+      year: 'Jan 2023 – Sep 2024',
+      title: 'Software Engineer',
+      company: 'AstroPay',
+      description:
+        'Investigated and resolved production incidents across microservices using Datadog and Kibana. Implemented integrations with Prisma and Mercado Pago APIs within distributed payment microservices (gateway, withdrawal, purchase).',
+      icon: Code,
+    },
+    {
+      year: 'Jan 2022 – Jan 2023',
+      title: 'Frontend Engineer',
+      company: 'AstroPay',
+      description:
+        'Increased user access and engagement by 40% by implementing tracking tools like Amplitude and Smartlook to improve UX and generate actionable product insights.',
+      icon: Code,
+    },
+    {
+      year: '2021 – 2022',
+      title: 'Frontend Developer',
+      company: 'Osana Salud',
+      description:
+        'Built a healthcare dashboard for DOSUBA and contributed to a peer-to-peer telemedicine platform for the Universidad de Buenos Aires featuring video calls, screen sharing, and media streaming.',
+      icon: Code,
+    },
+    {
+      year: '2020 – 2021',
+      title: 'Software Developer',
+      company: 'NEORIS',
+      description:
+        'Developed banking workflows involving transactions and biometric authentication for payroll account unlock processes.',
+      icon: Code,
+    },
+    {
+      year: '2019 – 2024',
+      title: 'Systems Engineering',
+      company: 'Universidad CAECE',
+      description:
+        'Bachelor\'s degree in Systems Engineering with focus on software development and cloud computing.',
       icon: Calendar,
     },
   ];
@@ -24,18 +58,18 @@ export const About = () => {
   const philosophyPoints = [
     {
       icon: Zap,
-      title: 'Automation First',
-      description: 'Every manual process should be automated, every deployment should be reproducible.',
+      title: 'Observability First',
+      description: 'If you can\'t measure it, you can\'t improve it. Good systems are built to be monitored and debugged.',
     },
     {
       icon: Code,
-      title: 'Infrastructure as Code',
-      description: 'Treat infrastructure with the same discipline as application code.',
+      title: 'Reliable by Design',
+      description: 'Build for resilience from the start. Distributed systems fail — your code should handle that gracefully.',
     },
     {
       icon: MapPin,
-      title: 'Cloud Native',
-      description: 'Build for the cloud from day one, embrace containerization and orchestration.',
+      title: 'Ship & Iterate',
+      description: 'Production is where the truth lives. Ship early, observe, learn, and continuously improve.',
     },
   ];
 
@@ -67,27 +101,28 @@ export const About = () => {
                 </div>
                 <div className="space-y-4 text-neutral-200 leading-relaxed">
                   <Typewriter
-                    text="Hello, I'm Neeraj Chandra Nakka, and I turn code into production reality."
+                    text="Hi, I'm Ninna — Software Engineer from Buenos Aires, Argentina."
                     delay={30}
                     className="text-primary-500 font-semibold block mb-4"
                   />
                   <p>
-                    I design, automate, and deploy systems that turn code into production-grade reality. 
-                    My journey began with full-stack development—building web apps with Java, React, and Node.js.
+                    I'm a DevOps-oriented Software Engineer with experience building scalable fintech
+                    platforms and production microservices. My journey started in frontend development—
+                    crafting interfaces with React, Vue, and TypeScript.
                   </p>
                   <p>
-                    Over time, that foundation evolved into a passion for DevOps and Cloud Engineering, 
-                    where I now focus on crafting scalable infrastructure, clean CI/CD pipelines, and resilient deployments.
+                    Over time, I evolved into full-stack and DevOps roles, working on production systems
+                    at companies like Mercado Libre and AstroPay. I've led architecture migrations, integrated
+                    external payment APIs, and resolved production incidents using observability tools like
+                    Datadog and Kibana.
                   </p>
                   <p>
-                    I work across AWS and Azure, orchestrate containers with Docker and Kubernetes, 
-                    and define infrastructure with Terraform and automation scripts. Behind the command line, 
-                    I'm equally comfortable in version control and workflow automation, using Git, GitHub, 
-                    and GitLab CI/CD to bridge collaboration and delivery.
+                    I'm also AWS Certified Cloud Practitioner and currently working toward the AWS Developer
+                    Associate certification, deepening my expertise in cloud-native architectures.
                   </p>
                   <p className="text-primary-500 font-medium">
-                    For me, DevOps isn't just about speed—it's about precision, repeatability, 
-                    and creating systems that empower developers to ship confidently and innovate faster.
+                    I believe great engineering is about building systems that are observable, resilient,
+                    and maintainable — not just systems that work.
                   </p>
                 </div>
               </div>
@@ -108,19 +143,19 @@ export const About = () => {
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
                     <span className="text-neutral-400">Experience</span>
-                    <span className="text-primary-500 font-mono">1+ years</span>
+                    <span className="text-primary-500 font-mono">5+ years</span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-neutral-400">Cloud Platforms</span>
-                    <span className="text-primary-500 font-mono">AWS, Azure</span>
+                    <span className="text-neutral-400">Cloud</span>
+                    <span className="text-primary-500 font-mono">AWS Certified</span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-neutral-400">Projects</span>
-                    <span className="text-primary-500 font-mono">7+ deployed</span>
+                    <span className="text-neutral-400">Companies</span>
+                    <span className="text-primary-500 font-mono">4+ (fintech focus)</span>
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-neutral-400">Technologies</span>
-                    <span className="text-primary-500 font-mono">19+ mastered</span>
+                    <span className="text-primary-500 font-mono">18+ in production</span>
                   </div>
                 </div>
               </div>
@@ -130,7 +165,7 @@ export const About = () => {
                   Specializations
                 </h3>
                 <div className="flex flex-wrap gap-2">
-                  {['Cloud Architecture', 'CI/CD Pipelines', 'Infrastructure as Code', 'Container Orchestration', 'Microservices'].map((skill) => (
+                  {['Microservices Architecture', 'Payment Systems', 'Observability & Debugging', 'Full-Stack Development', 'Cloud (AWS)', 'Frontend Engineering'].map((skill) => (
                     <span
                       key={skill}
                       className="px-3 py-1 bg-neutral-800 text-neutral-200 text-sm rounded-md border border-neutral-700 hover:border-primary-500/50 transition-colors"
@@ -159,7 +194,7 @@ export const About = () => {
               Career Timeline
             </h2>
             <p className="text-neutral-400 max-w-2xl mx-auto">
-              My journey from full-stack development to DevOps engineering
+              From frontend to full-stack and DevOps — building at scale in the fintech industry
             </p>
           </motion.div>
 
