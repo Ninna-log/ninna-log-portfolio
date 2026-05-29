@@ -23,7 +23,7 @@ export const Footer = () => {
     },
     {
       name: 'Email',
-      url: `mailto:${CONTACT.email}`,
+      url: `https://mail.google.com/mail/?view=cm&fs=1&to=${CONTACT.email}`,
       icon: Mail,
     },
   ];

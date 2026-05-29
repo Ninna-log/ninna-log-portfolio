@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  FileText, 
-  Calendar, 
-  Clock, 
-  TrendingUp, 
-  Target, 
-  Users, 
-  Code, 
-  Database, 
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  FileText,
+  Calendar,
+  Clock,
+  TrendingUp,
+  Target,
+  Users,
+  Code,
+  Database,
   Cloud,
   Shield,
   Zap,
@@ -24,19 +24,19 @@ import {
   Lock,
   Cpu,
   Network,
-  Monitor
-} from 'lucide-react';
-import { 
-  AnimatedBackground, 
-  TechBadge, 
-  StatsCard, 
-  ProgressBar, 
-  TimelineItem, 
+  Monitor,
+} from "lucide-react";
+import {
+  AnimatedBackground,
+  TechBadge,
+  StatsCard,
+  ProgressBar,
+  TimelineItem,
   InteractiveButton,
   categoryColors,
   statusColors,
-  difficultyColors
-} from '../visual/VisualComponents';
+  difficultyColors,
+} from "../visual/VisualComponents";
 
 interface CaseStudy {
   id: number;
@@ -76,33 +76,48 @@ const caseStudies: CaseStudy[] = [
     timeline: {
       start: "Sep 2024",
       end: "Present",
-      duration: "Ongoing"
+      duration: "Ongoing",
     },
-    challenge: "A legacy Java-based WebView was becoming a bottleneck for team velocity and operational scalability at Mercado Libre. The architecture made it difficult to iterate quickly, onboard new developers, and maintain consistency across clients in a high-traffic environment.",
+    challenge:
+      "A legacy Java-based WebView was becoming a bottleneck for team velocity and operational scalability at Mercado Libre. The architecture made it difficult to iterate quickly, onboard new developers, and maintain consistency across clients in a high-traffic environment.",
     solution: [
       "Led the full migration from a Java-based WebView to a modern JavaScript/TypeScript architecture",
       "Improved service maintainability by adopting component-based patterns and TypeScript's type safety",
       "Contributed to the integration of multiple internal services into the Browser Assessment Hub for centralized abuse detection",
       "Designed and developed an internal platform for managing abuse prevention policies and signals across multiple clients",
-      "Ensured backward compatibility throughout the migration to avoid service disruptions"
+      "Ensured backward compatibility throughout the migration to avoid service disruptions",
     ],
     impact: [
       "Significantly improved service maintainability and developer onboarding speed",
       "Enabled faster iteration cycles with a modern JS/TS codebase",
       "Centralized abuse detection logic, reducing duplication across client integrations",
       "Supported operational consistency across multiple clients with centralized policy configuration",
-      "Contributed to a more scalable and observable architecture at one of Latin America's largest tech companies"
+      "Contributed to a more scalable and observable architecture at one of Latin America's largest tech companies",
     ],
-    technologies: ["JavaScript", "TypeScript", "Java", "React", "Node.js", "Microservices", "REST APIs"],
+    technologies: [
+      "JavaScript",
+      "TypeScript",
+      "Java",
+      "React",
+      "Node.js",
+      "Microservices",
+      "REST APIs",
+    ],
     impactMetrics: {
       performance: { improvement: "40%" },
       availability: { uptime: "99.9%", improvement: "Maintained" },
-      scalability: { capacity: "Multi-client", improvement: "Centralized" }
+      scalability: { capacity: "Multi-client", improvement: "Centralized" },
     },
     architecture: {
-      components: ["JS/TS Frontend Layer", "Browser Assessment Hub", "Policy Management API", "Abuse Detection Services", "Internal Client Integrations"],
-      pattern: "Microservices with Centralized Policy Management"
-    }
+      components: [
+        "JS/TS Frontend Layer",
+        "Browser Assessment Hub",
+        "Policy Management API",
+        "Abuse Detection Services",
+        "Internal Client Integrations",
+      ],
+      pattern: "Microservices with Centralized Policy Management",
+    },
   },
   {
     id: 2,
@@ -113,33 +128,53 @@ const caseStudies: CaseStudy[] = [
     timeline: {
       start: "Jan 2023",
       end: "Sep 2024",
-      duration: "20 months"
+      duration: "20 months",
     },
-    challenge: "Operating core payment microservices in a high-availability fintech environment requires not only reliable integrations with external payment providers, but also the ability to detect, diagnose, and resolve production incidents quickly without impacting end users.",
+    challenge:
+      "Operating core payment microservices in a high-availability fintech environment requires not only reliable integrations with external payment providers, but also the ability to detect, diagnose, and resolve production incidents quickly without impacting end users.",
     solution: [
       "Contributed to core payment microservices covering gateway, withdrawal, and purchase flows",
       "Implemented and maintained integrations with external payment APIs including Prisma and Mercado Pago",
       "Used Datadog and Kibana as the primary observability stack to monitor distributed system health",
       "Investigated and resolved production incidents across microservices, improving resolution time",
-      "Worked within a high-availability distributed architecture designed for fintech scale"
+      "Worked within a high-availability distributed architecture designed for fintech scale",
     ],
     impact: [
       "Improved system reliability and incident resolution time through proactive observability",
       "Successfully integrated two major external payment providers into the existing microservices architecture",
       "Contributed to maintaining high availability for gateway, withdrawal, and purchase flows",
       "Reduced mean time to detection (MTTD) by leveraging structured logging and distributed tracing",
-      "Supported a fintech platform processing high-volume transactions across multiple markets"
+      "Supported a fintech platform processing high-volume transactions across multiple markets",
     ],
-    technologies: ["Node.js", "TypeScript", "Datadog", "Kibana", "REST APIs", "Microservices", "Distributed Systems"],
+    technologies: [
+      "Node.js",
+      "TypeScript",
+      "Datadog",
+      "Kibana",
+      "REST APIs",
+      "Microservices",
+      "Distributed Systems",
+    ],
     impactMetrics: {
       availability: { uptime: "99.9%", improvement: "Maintained" },
       performance: { improvement: "30%" },
-      deploymentTime: { before: "Manual review", after: "Automated alerts", improvement: "MTTD reduced" }
+      deploymentTime: {
+        before: "Manual review",
+        after: "Automated alerts",
+        improvement: "MTTD reduced",
+      },
     },
     architecture: {
-      components: ["Payment Gateway Service", "Withdrawal Service", "Purchase Service", "Prisma Integration", "Mercado Pago Integration", "Datadog Dashboards"],
-      pattern: "Event-driven Microservices with Full Observability"
-    }
+      components: [
+        "Payment Gateway Service",
+        "Withdrawal Service",
+        "Purchase Service",
+        "Prisma Integration",
+        "Mercado Pago Integration",
+        "Datadog Dashboards",
+      ],
+      pattern: "Event-driven Microservices with Full Observability",
+    },
   },
   {
     id: 3,
@@ -150,57 +185,89 @@ const caseStudies: CaseStudy[] = [
     timeline: {
       start: "2021",
       end: "2022",
-      duration: "1 year"
+      duration: "1 year",
     },
-    challenge: "Build a reliable, real-time telemedicine platform for the Universidad de Buenos Aires that enables remote therapy sessions with video calls, screen sharing, file sharing, and media streaming — all within a secure, low-latency environment accessible to patients under stress.",
+    challenge:
+      "Build a reliable, real-time telemedicine platform for the Universidad de Buenos Aires that enables remote therapy sessions with video calls, screen sharing, file sharing, and media streaming — all within a secure, low-latency environment accessible to patients under stress.",
     solution: [
       "Contributed to the development of a peer-to-peer telemedicine platform for CEPT (Centro de Estrés Post-Traumático)",
       "Implemented real-time video calls, screen sharing, and file sharing features",
       "Built a healthcare management dashboard for DOSUBA (Dirección de Obra Social de la Universidad de Buenos Aires)",
       "Worked with WebRTC-based technologies for media streaming and low-latency communication",
-      "Focused on UX accessibility for vulnerable user groups in high-stress situations"
+      "Focused on UX accessibility for vulnerable user groups in high-stress situations",
     ],
     impact: [
       "Enabled remote therapy access for trauma recovery patients at the Universidad de Buenos Aires",
       "Delivered a fully featured telemedicine platform with video, audio, and file capabilities",
       "Reduced friction for patients and healthcare providers with an intuitive, accessible UI",
       "Supported healthcare administration through the DOSUBA management dashboard",
-      "Contributed to digital health infrastructure serving a major Argentine public university"
+      "Contributed to digital health infrastructure serving a major Argentine public university",
     ],
-    technologies: ["React", "JavaScript", "Node.js", "WebRTC", "REST APIs", "HTML", "CSS"],
+    technologies: [
+      "React",
+      "JavaScript",
+      "Node.js",
+      "WebRTC",
+      "REST APIs",
+      "HTML",
+      "CSS",
+    ],
     impactMetrics: {
       availability: { uptime: "99%", improvement: "New platform" },
       performance: { improvement: "Real-time <200ms latency" },
-      scalability: { capacity: "Multi-user sessions", improvement: "Concurrent support" }
+      scalability: {
+        capacity: "Multi-user sessions",
+        improvement: "Concurrent support",
+      },
     },
     architecture: {
-      components: ["WebRTC P2P Layer", "React Frontend", "Node.js Backend", "File Sharing Module", "DOSUBA Dashboard", "Session Management"],
-      pattern: "Peer-to-Peer Real-Time Architecture"
-    }
-  }
+      components: [
+        "WebRTC P2P Layer",
+        "React Frontend",
+        "Node.js Backend",
+        "File Sharing Module",
+        "DOSUBA Dashboard",
+        "Session Management",
+      ],
+      pattern: "Peer-to-Peer Real-Time Architecture",
+    },
+  },
 ];
 
 const EnhancedCaseStudies: React.FC = () => {
-  const [selectedStudy, setSelectedStudy] = useState<number | null>(caseStudies[0]?.id || null);
-  const [activeTab, setActiveTab] = useState<'overview' | 'solution' | 'results'>('overview');
+  const [selectedStudy, setSelectedStudy] = useState<number | null>(
+    caseStudies[0]?.id || null,
+  );
+  const [activeTab, setActiveTab] = useState<
+    "overview" | "solution" | "results"
+  >("overview");
 
-  const selectedStudyData = caseStudies.find(study => study.id === selectedStudy);
+  const selectedStudyData = caseStudies.find(
+    (study) => study.id === selectedStudy,
+  );
 
-  const categories = ['All', 'Full-Stack', 'DevOps', 'Cloud Infrastructure'];
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  
-  const filteredStudies = selectedCategory === 'All' 
-    ? caseStudies 
-    : caseStudies.filter(study => study.category === selectedCategory);
+  const categories = ["All", "Full-Stack", "DevOps", "Cloud Infrastructure"];
+  const [selectedCategory, setSelectedCategory] = useState("All");
+
+  const filteredStudies =
+    selectedCategory === "All"
+      ? caseStudies
+      : caseStudies.filter((study) => study.category === selectedCategory);
 
   const getIconForMetric = (metric: string) => {
     switch (metric) {
-      case 'deploymentTime': return <Zap className="w-5 h-5" />;
-      case 'cost': return <TrendingUp className="w-5 h-5" />;
-      case 'performance': return <BarChart3 className="w-5 h-5" />;
-      case 'availability': return <Target className="w-5 h-5" />;
-      case 'scalability': return <TrendingUp className="w-5 h-5" />;
-      default: return <BarChart3 className="w-5 h-5" />;
+      case "deploymentTime":
+        return <Zap className="w-5 h-5" />;
+      case "cost":
+        return <TrendingUp className="w-5 h-5" />;
+      case "performance":
+        return <BarChart3 className="w-5 h-5" />;
+      case "availability":
+        return <Target className="w-5 h-5" />;
+      case "scalability":
+        return <TrendingUp className="w-5 h-5" />;
+      default:
+        return <BarChart3 className="w-5 h-5" />;
     }
   };
 
@@ -217,7 +284,9 @@ const EnhancedCaseStudies: React.FC = () => {
             CASE_STUDIES.EXE
           </h1>
           <p className="text-green-200 text-lg max-w-3xl mx-auto">
-            Real-world engineering challenges solved in production — at companies like Mercado Libre, AstroPay, and Osana Salud — with measurable impact and technical depth
+            Real-world engineering challenges solved in production — at
+            companies like Mercado Libre, AstroPay, and Osana Salud — with
+            measurable impact and technical depth
           </p>
         </motion.div>
 
@@ -268,8 +337,8 @@ const EnhancedCaseStudies: React.FC = () => {
                 onClick={() => setSelectedCategory(category)}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                   selectedCategory === category
-                    ? 'bg-green-400 text-black'
-                    : 'bg-gray-800 text-green-400 border border-gray-600 hover:border-green-400'
+                    ? "bg-green-400 text-black"
+                    : "bg-gray-800 text-green-400 border border-gray-600 hover:border-green-400"
                 }`}
               >
                 {category}
@@ -286,30 +355,38 @@ const EnhancedCaseStudies: React.FC = () => {
                 onClick={() => setSelectedStudy(study.id)}
                 className={`cursor-pointer p-4 rounded-lg border transition-all duration-300 ${
                   selectedStudy === study.id
-                    ? 'bg-green-400/10 border-green-400'
-                    : 'bg-gray-900/50 border-gray-700 hover:border-green-400/50'
-                } ${study.featured ? 'ring-2 ring-yellow-400/50' : ''}`}
+                    ? "bg-green-400/10 border-green-400"
+                    : "bg-gray-900/50 border-gray-700 hover:border-green-400/50"
+                } ${study.featured ? "ring-2 ring-yellow-400/50" : ""}`}
               >
                 <div className="flex items-center justify-between mb-2">
-                  <TechBadge name={study.category} category={study.category} size="sm" />
+                  <TechBadge
+                    name={study.category}
+                    category={study.category}
+                    size="sm"
+                  />
                   {study.featured && (
-                    <span className="text-xs text-yellow-400 font-medium">⭐ Featured</span>
+                    <span className="text-xs text-yellow-400 font-medium">
+                      ⭐ Featured
+                    </span>
                   )}
                 </div>
-                
+
                 <h3 className="text-white font-bold mb-1 text-sm line-clamp-2">
                   {study.title}
                 </h3>
-                
+
                 <p className="text-gray-400 text-xs mb-3 line-clamp-2">
                   {study.subtitle}
                 </p>
-                
+
                 <div className="flex items-center gap-2 text-xs text-gray-500">
                   <Calendar className="w-3 h-3" />
                   <span>{study.timeline.duration}</span>
                   <span>•</span>
-                  <span>{study.timeline.start} - {study.timeline.end}</span>
+                  <span>
+                    {study.timeline.start} - {study.timeline.end}
+                  </span>
                 </div>
               </motion.div>
             ))}
@@ -331,9 +408,14 @@ const EnhancedCaseStudies: React.FC = () => {
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                   <div>
                     <div className="flex items-center gap-3 mb-2">
-                      <TechBadge name={selectedStudyData.category} category={selectedStudyData.category} />
+                      <TechBadge
+                        name={selectedStudyData.category}
+                        category={selectedStudyData.category}
+                      />
                       {selectedStudyData.featured && (
-                        <span className="text-xs text-yellow-400 font-medium">⭐ Featured Project</span>
+                        <span className="text-xs text-yellow-400 font-medium">
+                          ⭐ Featured Project
+                        </span>
                       )}
                     </div>
                     <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
@@ -343,21 +425,27 @@ const EnhancedCaseStudies: React.FC = () => {
                       {selectedStudyData.subtitle}
                     </p>
                   </div>
-                  
+
                   <div className="flex items-center gap-4 text-sm text-gray-400">
                     <div className="text-center">
                       <Calendar className="w-5 h-5 mx-auto mb-1 text-green-400" />
-                      <p className="font-medium">{selectedStudyData.timeline.start}</p>
+                      <p className="font-medium">
+                        {selectedStudyData.timeline.start}
+                      </p>
                       <p className="text-xs">Start Date</p>
                     </div>
                     <div className="text-center">
                       <Clock className="w-5 h-5 mx-auto mb-1 text-green-400" />
-                      <p className="font-medium">{selectedStudyData.timeline.duration}</p>
+                      <p className="font-medium">
+                        {selectedStudyData.timeline.duration}
+                      </p>
                       <p className="text-xs">Duration</p>
                     </div>
                     <div className="text-center">
                       <CheckCircle className="w-5 h-5 mx-auto mb-1 text-green-400" />
-                      <p className="font-medium">{selectedStudyData.timeline.end}</p>
+                      <p className="font-medium">
+                        {selectedStudyData.timeline.end}
+                      </p>
                       <p className="text-xs">Completion</p>
                     </div>
                   </div>
@@ -367,9 +455,21 @@ const EnhancedCaseStudies: React.FC = () => {
               {/* Tab Navigation */}
               <div className="flex border-b border-gray-700">
                 {[
-                  { id: 'overview', label: 'Overview', icon: <FileText className="w-4 h-4" /> },
-                  { id: 'solution', label: 'Solution', icon: <Code className="w-4 h-4" /> },
-                  { id: 'results', label: 'Results', icon: <BarChart3 className="w-4 h-4" /> }
+                  {
+                    id: "overview",
+                    label: "Overview",
+                    icon: <FileText className="w-4 h-4" />,
+                  },
+                  {
+                    id: "solution",
+                    label: "Solution",
+                    icon: <Code className="w-4 h-4" />,
+                  },
+                  {
+                    id: "results",
+                    label: "Results",
+                    icon: <BarChart3 className="w-4 h-4" />,
+                  },
                 ].map((tab) => (
                   <motion.button
                     key={tab.id}
@@ -377,8 +477,8 @@ const EnhancedCaseStudies: React.FC = () => {
                     onClick={() => setActiveTab(tab.id as any)}
                     className={`flex items-center gap-2 px-6 py-4 text-sm font-medium transition-all duration-300 ${
                       activeTab === tab.id
-                        ? 'text-green-400 border-b-2 border-green-400'
-                        : 'text-gray-400 hover:text-green-400'
+                        ? "text-green-400 border-b-2 border-green-400"
+                        : "text-gray-400 hover:text-green-400"
                     }`}
                   >
                     {tab.icon}
@@ -397,7 +497,7 @@ const EnhancedCaseStudies: React.FC = () => {
                     exit={{ opacity: 0, x: -20 }}
                     transition={{ duration: 0.3 }}
                   >
-                    {activeTab === 'overview' && (
+                    {activeTab === "overview" && (
                       <div className="space-y-6">
                         <div>
                           <h3 className="text-xl font-bold text-green-400 mb-4 flex items-center gap-2">
@@ -417,7 +517,12 @@ const EnhancedCaseStudies: React.FC = () => {
                             </h3>
                             <div className="flex flex-wrap gap-2">
                               {selectedStudyData.technologies.map((tech) => (
-                                <TechBadge key={tech} name={tech} category={selectedStudyData.category} size="sm" />
+                                <TechBadge
+                                  key={tech}
+                                  name={tech}
+                                  category={selectedStudyData.category}
+                                  size="sm"
+                                />
                               ))}
                             </div>
                           </div>
@@ -431,18 +536,23 @@ const EnhancedCaseStudies: React.FC = () => {
                               {selectedStudyData.architecture?.pattern}
                             </p>
                             <div className="flex flex-wrap gap-2">
-                              {selectedStudyData.architecture?.components.map((component) => (
-                                <span key={component} className="px-2 py-1 bg-gray-800 text-green-400 text-xs rounded">
-                                  {component}
-                                </span>
-                              ))}
+                              {selectedStudyData.architecture?.components.map(
+                                (component) => (
+                                  <span
+                                    key={component}
+                                    className="px-2 py-1 bg-gray-800 text-green-400 text-xs rounded"
+                                  >
+                                    {component}
+                                  </span>
+                                ),
+                              )}
                             </div>
                           </div>
                         </div>
                       </div>
                     )}
 
-                    {activeTab === 'solution' && (
+                    {activeTab === "solution" && (
                       <div className="space-y-6">
                         <h3 className="text-xl font-bold text-green-400 mb-4 flex items-center gap-2">
                           <Code className="w-5 h-5" />
@@ -469,7 +579,7 @@ const EnhancedCaseStudies: React.FC = () => {
                       </div>
                     )}
 
-                    {activeTab === 'results' && (
+                    {activeTab === "results" && (
                       <div className="space-y-6">
                         <h3 className="text-xl font-bold text-green-400 mb-4 flex items-center gap-2">
                           <BarChart3 className="w-5 h-5" />
@@ -478,85 +588,148 @@ const EnhancedCaseStudies: React.FC = () => {
 
                         {/* Impact Metrics */}
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
-                          {Object.entries(selectedStudyData.impactMetrics).map(([key, metrics]) => (
-                            <div key={key} className="bg-gray-800/50 rounded-lg p-4">
-                              <div className="flex items-center gap-2 mb-3">
-                                {getIconForMetric(key)}
-                                <h4 className="font-bold text-white capitalize">
-                                  {key.replace(/([A-Z])/g, ' $1').trim()}
-                                </h4>
+                          {Object.entries(selectedStudyData.impactMetrics).map(
+                            ([key, metrics]) => (
+                              <div
+                                key={key}
+                                className="bg-gray-800/50 rounded-lg p-4"
+                              >
+                                <div className="flex items-center gap-2 mb-3">
+                                  {getIconForMetric(key)}
+                                  <h4 className="font-bold text-white capitalize">
+                                    {key.replace(/([A-Z])/g, " $1").trim()}
+                                  </h4>
+                                </div>
+
+                                {key === "deploymentTime" &&
+                                  metrics &&
+                                  (metrics as any).before &&
+                                  (metrics as any).after &&
+                                  (metrics as any).improvement && (
+                                    <div className="space-y-2">
+                                      <div className="flex justify-between text-sm">
+                                        <span className="text-gray-400">
+                                          Before
+                                        </span>
+                                        <span className="text-red-400">
+                                          {(metrics as any).before}
+                                        </span>
+                                      </div>
+                                      <div className="flex justify-between text-sm">
+                                        <span className="text-gray-400">
+                                          After
+                                        </span>
+                                        <span className="text-green-400">
+                                          {(metrics as any).after}
+                                        </span>
+                                      </div>
+                                      <div className="flex justify-between text-sm font-bold">
+                                        <span className="text-gray-400">
+                                          Improvement
+                                        </span>
+                                        <span className="text-green-400">
+                                          -{(metrics as any).improvement}
+                                        </span>
+                                      </div>
+                                    </div>
+                                  )}
+
+                                {key === "cost" &&
+                                  metrics &&
+                                  (metrics as any).before &&
+                                  (metrics as any).after &&
+                                  (metrics as any).reduction && (
+                                    <div className="space-y-2">
+                                      <div className="flex justify-between text-sm">
+                                        <span className="text-gray-400">
+                                          Before
+                                        </span>
+                                        <span className="text-red-400">
+                                          {(metrics as any).before}
+                                        </span>
+                                      </div>
+                                      <div className="flex justify-between text-sm">
+                                        <span className="text-gray-400">
+                                          After
+                                        </span>
+                                        <span className="text-green-400">
+                                          {(metrics as any).after}
+                                        </span>
+                                      </div>
+                                      <div className="flex justify-between text-sm font-bold">
+                                        <span className="text-gray-400">
+                                          Reduction
+                                        </span>
+                                        <span className="text-green-400">
+                                          -{(metrics as any).reduction}
+                                        </span>
+                                      </div>
+                                    </div>
+                                  )}
+
+                                {key === "availability" &&
+                                  metrics &&
+                                  "uptime" in metrics && (
+                                    <div className="space-y-2">
+                                      <div className="flex justify-between text-sm">
+                                        <span className="text-gray-400">
+                                          Uptime
+                                        </span>
+                                        <span className="text-green-400">
+                                          {(metrics as any).uptime}
+                                        </span>
+                                      </div>
+                                      <div className="flex justify-between text-sm font-bold">
+                                        <span className="text-gray-400">
+                                          Improvement
+                                        </span>
+                                        <span className="text-green-400">
+                                          +{(metrics as any).improvement}
+                                        </span>
+                                      </div>
+                                    </div>
+                                  )}
+
+                                {key === "scalability" &&
+                                  metrics &&
+                                  "capacity" in metrics && (
+                                    <div className="space-y-2">
+                                      <div className="flex justify-between text-sm">
+                                        <span className="text-gray-400">
+                                          Capacity
+                                        </span>
+                                        <span className="text-green-400">
+                                          {(metrics as any).capacity}
+                                        </span>
+                                      </div>
+                                      <div className="flex justify-between text-sm font-bold">
+                                        <span className="text-gray-400">
+                                          Improvement
+                                        </span>
+                                        <span className="text-green-400">
+                                          +{(metrics as any).improvement}
+                                        </span>
+                                      </div>
+                                    </div>
+                                  )}
+
+                                {key === "performance" &&
+                                  metrics &&
+                                  "improvement" in metrics && (
+                                    <div className="space-y-2">
+                                      <div className="flex justify-between text-sm font-bold">
+                                        <span className="text-gray-400">
+                                          Performance Gain
+                                        </span>
+                                        <span className="text-green-400">
+                                          +{(metrics as any).improvement}
+                                        </span>
+                                      </div>
+                                    </div>
+                                  )}
                               </div>
-                              
-                              {key === 'deploymentTime' && metrics && (metrics as any).before && (metrics as any).after && (metrics as any).improvement && (
-                                <div className="space-y-2">
-                                  <div className="flex justify-between text-sm">
-                                    <span className="text-gray-400">Before</span>
-                                    <span className="text-red-400">{(metrics as any).before}</span>
-                                  </div>
-                                  <div className="flex justify-between text-sm">
-                                    <span className="text-gray-400">After</span>
-                                    <span className="text-green-400">{(metrics as any).after}</span>
-                                  </div>
-                                  <div className="flex justify-between text-sm font-bold">
-                                    <span className="text-gray-400">Improvement</span>
-                                    <span className="text-green-400">-{(metrics as any).improvement}</span>
-                                  </div>
-                                </div>
-                              )}
-
-                              {key === 'cost' && metrics && (metrics as any).before && (metrics as any).after && (metrics as any).reduction && (
-                                <div className="space-y-2">
-                                  <div className="flex justify-between text-sm">
-                                    <span className="text-gray-400">Before</span>
-                                    <span className="text-red-400">{(metrics as any).before}</span>
-                                  </div>
-                                  <div className="flex justify-between text-sm">
-                                    <span className="text-gray-400">After</span>
-                                    <span className="text-green-400">{(metrics as any).after}</span>
-                                  </div>
-                                  <div className="flex justify-between text-sm font-bold">
-                                    <span className="text-gray-400">Reduction</span>
-                                    <span className="text-green-400">-{(metrics as any).reduction}</span>
-                                  </div>
-                                </div>
-                              )}
-
-                              {key === 'availability' && metrics && 'uptime' in metrics && (
-                                <div className="space-y-2">
-                                  <div className="flex justify-between text-sm">
-                                    <span className="text-gray-400">Uptime</span>
-                                    <span className="text-green-400">{(metrics as any).uptime}</span>
-                                  </div>
-                                  <div className="flex justify-between text-sm font-bold">
-                                    <span className="text-gray-400">Improvement</span>
-                                    <span className="text-green-400">+{(metrics as any).improvement}</span>
-                                  </div>
-                                </div>
-                              )}
-
-                              {key === 'scalability' && metrics && 'capacity' in metrics && (
-                                <div className="space-y-2">
-                                  <div className="flex justify-between text-sm">
-                                    <span className="text-gray-400">Capacity</span>
-                                    <span className="text-green-400">{(metrics as any).capacity}</span>
-                                  </div>
-                                  <div className="flex justify-between text-sm font-bold">
-                                    <span className="text-gray-400">Improvement</span>
-                                    <span className="text-green-400">+{(metrics as any).improvement}</span>
-                                  </div>
-                                </div>
-                              )}
-
-                              {key === 'performance' && metrics && 'improvement' in metrics && (
-                                <div className="space-y-2">
-                                  <div className="flex justify-between text-sm font-bold">
-                                    <span className="text-gray-400">Performance Gain</span>
-                                    <span className="text-green-400">+{(metrics as any).improvement}</span>
-                                  </div>
-                                </div>
-                              )}
-                            </div>
-                          ))}
+                            ),
+                          )}
                         </div>
 
                         {/* Impact List */}
@@ -570,7 +743,9 @@ const EnhancedCaseStudies: React.FC = () => {
                               className="flex items-start gap-3 p-3 bg-green-500/10 border border-green-500/30 rounded-lg"
                             >
                               <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
-                              <p className="text-gray-300 leading-relaxed">{item}</p>
+                              <p className="text-gray-300 leading-relaxed">
+                                {item}
+                              </p>
                             </motion.div>
                           ))}
                         </div>
@@ -594,15 +769,22 @@ const EnhancedCaseStudies: React.FC = () => {
             INTERESTED_IN_A_SIMILAR_PROJECT?
           </h2>
           <p className="text-green-200 mb-6 max-w-2xl mx-auto">
-            Let's discuss how we can transform your infrastructure and achieve similar results for your organization.
+            Let's discuss how we can transform your infrastructure and achieve
+            similar results for your organization.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <InteractiveButton variant="primary" icon={<ArrowRight className="w-4 h-4" />}>
+            <InteractiveButton
+              variant="primary"
+              icon={<ArrowRight className="w-4 h-4" />}
+            >
               Start Your Project
             </InteractiveButton>
-            
-            <InteractiveButton variant="outline" icon={<FileText className="w-4 h-4" />}>
+
+            <InteractiveButton
+              variant="outline"
+              icon={<FileText className="w-4 h-4" />}
+            >
               Download Case Study PDF
             </InteractiveButton>
           </div>

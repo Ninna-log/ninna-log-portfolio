@@ -357,7 +357,7 @@ export const Skills = () => {
               ].map((item) => (
                 <button
                   key={item.cmd}
-                  onClick={() => setCurrentInput(item.cmd)}
+                  onClick={() => executeCommand(item.cmd)}
                   className="p-3 bg-bg-elevated border border-neutral-700 rounded-lg text-left hover:border-primary-500/50 transition-colors group"
                 >
                   <div className="font-mono text-sm text-primary-500 group-hover:text-primary-400">

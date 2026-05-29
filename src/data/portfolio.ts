@@ -13,6 +13,7 @@ export const SKILLS = [
   { name: 'Distributed Systems', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-plain.svg', category: 'observability', level: 80 },
 
   // DevOps
+  { name: 'Docker', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg', category: 'devops', level: 80 },
   { name: 'CI/CD Pipelines', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg', category: 'devops', level: 80 },
   { name: 'Microservices', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg', category: 'devops', level: 85 },
   { name: 'Git', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg', category: 'devops', level: 92 },
@@ -29,6 +30,12 @@ export const SKILLS = [
   { name: 'Vue.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg', category: 'frontend', level: 75 },
   { name: 'Redux', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg', category: 'frontend', level: 75 },
   { name: 'Vuex', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg', category: 'frontend', level: 70 },
+
+  // Database
+  { name: 'PostgreSQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg', category: 'backend', level: 75 },
+
+  // API
+  { name: 'GraphQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg', category: 'backend', level: 72 },
 
   // Languages
   { name: 'JavaScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg', category: 'languages', level: 92 },
@@ -99,7 +106,7 @@ export const CONTACT = {
   social: {
     github: 'https://github.com/Ninna-log',
     linkedin: 'https://www.linkedin.com/in/gianinna-marquez/',
-    twitter: '',
+    twitter: 'https://x.com/__Hybris',
   }
 };
 

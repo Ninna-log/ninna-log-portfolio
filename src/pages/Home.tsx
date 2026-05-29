@@ -1,25 +1,26 @@
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { ExternalLink, Github, Code2 } from 'lucide-react';
-import { Grid3DBackground } from '../components/Grid3D';
-import { Typewriter } from '../components/Typewriter';
-import { HERO_CONTENT, SKILLS, PROJECTS } from '../data/portfolio';
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { ExternalLink, Github, Code2 } from "lucide-react";
+import { Grid3DBackground } from "../components/Grid3D";
+import { Typewriter } from "../components/Typewriter";
+import { HERO_CONTENT, SKILLS, PROJECTS } from "../data/portfolio";
 
 export const Home = () => {
   const stats = [
-    { label: 'Years Experience', value: '5+' },
-    { label: 'Companies', value: '4+' },
-    { label: 'Projects Shipped', value: '10+' },
-    { label: 'Technologies', value: '18+' },
+    { label: "Years Experience", value: "4+" },
+    { label: "Companies", value: "4+" },
+    { label: "Projects Shipped", value: "10+" },
+    { label: "Technologies", value: "18+" },
   ];
 
-  const featuredSkills = SKILLS.slice(0, 6);
+  const featuredSkillNames = ['AWS (IAM, EC2, S3)', 'AWS Lambda', 'Datadog', 'Kibana', 'JavaScript', 'TypeScript', 'Node.js', 'React', 'Express', 'PostgreSQL', 'GraphQL', 'Docker'];
+  const featuredSkills = featuredSkillNames.map(name => SKILLS.find(s => s.name === name)).filter(Boolean) as typeof SKILLS;
 
   return (
     <div className="min-h-screen bg-bg-page relative overflow-hidden">
       {/* 3D Grid Background */}
       <Grid3DBackground />
-      
+
       {/* Main Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center relative z-10">
@@ -124,7 +125,8 @@ export const Home = () => {
               Featured Technologies
             </h2>
             <p className="text-neutral-400 max-w-2xl mx-auto">
-              A curated selection of the technologies I work with to build and ship scalable production systems
+              A curated selection of the technologies I work with to build and
+              ship scalable production systems
             </p>
           </motion.div>
 
@@ -133,7 +135,7 @@ export const Home = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, staggerChildren: 0.1 }}
             viewport={{ once: true }}
-            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6"
+            className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6"
           >
             {featuredSkills.map((skill, index) => (
               <motion.div
@@ -189,8 +191,9 @@ export const Home = () => {
               Let's Build Something Together
             </h2>
             <p className="text-xl text-neutral-200 mb-8 leading-relaxed">
-              Whether it's a full-stack product, a microservices architecture, or improving system reliability—
-              I'm here to turn ideas into production-grade reality.
+              Whether it's a full-stack product, a microservices architecture,
+              or improving system reliability— I'm here to turn ideas into
+              production-grade reality.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
